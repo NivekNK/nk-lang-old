@@ -1,0 +1,31 @@
+%{
+#include "parser/token.h"
+%}
+struct TokenKeyword {
+    const char* keyword;
+    nk::TokenType type;
+};
+%%
+type, nk::TokenType::TYPE,
+if, nk::TokenType::IF,
+else, nk::TokenType::ELSE,
+true, nk::TokenType::BOOL_TRUE,
+false, nk::TokenType::BOOL_FALSE,
+for, nk::TokenType::FOR,
+func, nk::TokenType::FUNC,
+return, nk::TokenType::RETURN,
+self, nk::TokenType::SELF,
+mut, nk::TokenType::MUT,
+u8, nk::TokenType::U8,
+u16, nk::TokenType::U16,
+u32, nk::TokenType::U32,
+u64, nk::TokenType::U64,
+i8, nk::TokenType::I8,
+i16, nk::TokenType::I16,
+i32, nk::TokenType::I32,
+i64, nk::TokenType::I64,
+f32, nk::TokenType::F32,
+f64, nk::TokenType::F64,
+dim, nk::TokenType::DIM,
+char, nk::TokenType::CHAR,
+str, nk::TokenType::STR,
